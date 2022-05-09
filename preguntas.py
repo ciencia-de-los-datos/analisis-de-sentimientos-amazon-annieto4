@@ -179,7 +179,7 @@ def pregunta_05():
     )
 
     cfm_test = confusion_matrix(
-        y_true=y_train,
+        y_true=y_test,
         y_pred=gridSearchCV.predict(X_test),
     )
 
