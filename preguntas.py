@@ -32,11 +32,11 @@ def pregunta_01():
     df_tagged = df[(df['lbl'] >= 0)]
     df_untagged = df[(df['lbl'].isna())]
 
-    x_tagged = df["msg"]
-    y_tagged = df["lbl"]
+    x_tagged = df_tagged["msg"]
+    y_tagged = df_tagged["lbl"]
 
-    x_untagged = df["msg"]
-    y_untagged = df["lbl"]
+    x_untagged = df_untagged["msg"]
+    y_untagged = df_untagged["lbl"]
 
     # Retorne los grupos de mensajes
     return x_tagged, y_tagged, x_untagged, y_untagged
@@ -52,7 +52,7 @@ def pregunta_02():
     from sklearn.model_selection import train_test_split
 
     # Cargue los datos generados en la pregunta 01.
-    x_tagged, y_tagged, _, _ = pregunta_01()
+    x_tagged, y_tagged, x_untagged, y_untagged = pregunta_01()
 
     # Divida los datos de entrenamiento y prueba. La semilla del generador de números
     # aleatorios es 12345. Use el 10% de patrones para la muestra de prueba.
