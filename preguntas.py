@@ -80,7 +80,7 @@ def pregunta_03():
     # Cree un stemeer que use el algoritmo de Porter.
     stemmer = PorterStremmer()
 
-    vectorizer = CountVectorizer(analyzer="word", token_pattern=r"(?u)\b[a-zA-z][a-zA-Z]+\b" lowercase=True)
+    vectorizer = CountVectorizer(analyzer="word", token_pattern=r"(?u)\b[a-zA-z][a-zA-Z]+\b", lowercase=True)
     # Cree una instancia del analizador de palabras (build_analyzer)
     analyzer = vectorizer.build_analizer()
 
