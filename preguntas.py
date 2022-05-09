@@ -125,7 +125,7 @@ def pregunta_04():
     )
 
     # Cree un pipeline que contenga el CountVectorizer y el modelo de BernoulliNB.
-    pipeline = pipeline(
+    pipeline = Pipeline(
         steps=[
             ("countVectorizer", countVectorizer),
             ("bernoulli", BernoulliNB()),
